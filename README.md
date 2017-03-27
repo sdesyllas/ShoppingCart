@@ -18,10 +18,10 @@ This is the path of the CSV file that the application needs to load the products
 web service.
 
 ## 3. Assumptions
-### While creating this project I made the assumption that the application will need the csvfile to run.
-### I made the assumption that no information about the pricing will be processed during checkout
-### I made the assumption that a third party library for CSV parsing can be used instead of implementing my own
-### Every method even for checkout and addproduct will be using an HTTP verb for testing purposes.
+* While creating this project I made the assumption that the application will need the csvfile to run.
+* I made the assumption that no information about the pricing will be processed during checkout
+* I made the assumption that a third party library for CSV parsing can be used instead of implementing my own
+* Every method even for checkout and addproduct will be using an HTTP verb for testing purposes.
 
 ## 4. Design
 The reason I chose this design is because I wanted every layer of the solution to be replacable with a different implementation.
