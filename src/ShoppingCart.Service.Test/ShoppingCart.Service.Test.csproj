@@ -67,7 +67,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntegrationTest.cs" />
     <Compile Include="ShoppingBasketControllerTests.cs" />
     <Compile Include="ProductsControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
