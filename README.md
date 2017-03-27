@@ -1,7 +1,8 @@
 # ShoppingCart API
 Shopping cart basic API
 
-## 1. For the solution I spent 3 hours
+## 1. Time to implement this project
+For the solution I spent 3 hours.
 
 ## 2. Compilation instructions
 The solution is consisting of
