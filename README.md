@@ -6,10 +6,12 @@ For the solution I spent 3.5 hours.
 
 ## 2. Compilation instructions
 The solution is consisting of
-- Web Service
-- Business Layer
-- Unit tests for Web service and Business Layer
-- Commmon library for Csv parsing
+* Web Service
+* Business Layer
+* Unit tests for Web service and Business Layer
+* Commmon library for Csv parsing
+
+The first time the solution is built nuget will pull all the packages mentioned in the packages.json files
 
 The webservice project has the following value in the web.config
 ```
@@ -21,7 +23,7 @@ The application can be tested using:
 * ShoppingCart.Business.Tests project for mock testing the business layer
 * ShoppingCart.Service.Tests project for mock testing the service layer
 
-The entry point of the application is the ShoppingCart.Service project which loads up the MVC project.
+The entry point of the application is the ShoppingCart.Service project which loads up the MVC projec with the web api service.
 
 The Web Api can be tested using the following examples:
 ### Product service
