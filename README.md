@@ -2,7 +2,7 @@
 Shopping cart basic API
 
 ## 1. Time to implement this project
-For the solution I spent 3 hours.
+For the solution I spent 3.5 hours.
 
 ## 2. Compilation instructions
 The solution is consisting of
@@ -44,6 +44,6 @@ All the service methods are available using HTTP Get verb.
 
 ## 4. Design
 The reason I chose this design is because I wanted every layer of the solution to be replacable with a different implementation.
-I approached this project using the stairway pattern thus I created different layers for each application task.
+I approached this project using the stairway pattern thus I created different layers for each application area.
 The web service has the dependency of the business layer, the business layer the dependency of the storage and the storage
 the dependency of the csv parser.
