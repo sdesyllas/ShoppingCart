@@ -17,12 +17,28 @@ The webservice project has the following value in the web.config
 ```
 This is the path of the CSV file that the application needs to load the products and is the only dependency of the 
 web service.
+The application can be tested using:
+* ShoppingCart.Business.Tests project for mock testing the business layer
+* ShoppingCart.Service.Tests project for mock testing the service layer
+
+The entry point of the application is the ShoppingCart.Service project which loads up the MVC project.
+
+The Web Api can be tested using the following examples:
+### Product service
+* http://localhost/api/products To get all the products
+* http://localhost/api/products/1001 To Get a product by Id 1001
+
+### Shopping Cart Service
+* http://localhost/api/ShoppingBasket/{cartname} To get the shopping cart details of the given cart name
+* http://localhost/api/ShoppingBasket/{cartname}/Add/{productId}/{quantity} To Add a product to the shopping cart with the given name, product id and quantity
+* http://localhost/api/ShoppingBasket/{cartname}/Checkout To checkout a shopping cart by the name.
 
 ## 3. Assumptions
 * While creating this project I made the assumption that the application will need the csvfile to run.
 * I made the assumption that no information about the pricing will be processed during checkout
 * I made the assumption that a third party library for CSV parsing can be used instead of implementing my own
 * Every method even for checkout and addproduct will be using an HTTP verb for testing purposes.
+* No client is needed at the time being, the application can be tested directly from a browser
 
 ## 4. Design
 The reason I chose this design is because I wanted every layer of the solution to be replacable with a different implementation.
