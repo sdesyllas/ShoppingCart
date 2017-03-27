@@ -11,7 +11,8 @@ The solution is consisting of
 * Unit tests for Web service and Business Layer
 * Commmon library for Csv parsing
 
-The first time the solution is built nuget will pull all the packages mentioned in the packages.json files
+The first time the solution is built nuget will pull all the packages mentioned in the packages.json files from the nuget
+repository (internet connection is required to pull down the packages that this solution uses).
 
 The webservice project has the following value in the web.config
 ```
@@ -49,3 +50,4 @@ The reason I chose this design is because I wanted every layer of the solution t
 I approached this project using the stairway pattern thus I created different layers for each application area.
 The web service has the dependency of the business layer, the business layer the dependency of the storage and the storage
 the dependency of the csv parser.
+The benefit is that every layer can be unit tested separately while mocking out all of its dependencies.
