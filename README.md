@@ -33,6 +33,8 @@ The Web Api can be tested using the following examples:
 * http://localhost/api/ShoppingBasket/{cartname}/Add/{productId}/{quantity} To Add a product to the shopping cart with the given name, product id and quantity
 * http://localhost/api/ShoppingBasket/{cartname}/Checkout To checkout a shopping cart by the name.
 
+All the service methods are available using HTTP Get verb.
+
 ## 3. Assumptions
 * While creating this project I made the assumption that the application will need the csvfile to run.
 * I made the assumption that no information about the pricing will be processed during checkout
