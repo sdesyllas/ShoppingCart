@@ -39,7 +39,7 @@ The Web Api can be tested using the following examples:
 All the service methods are available using HTTP Get verb.
 
 ## 3. Assumptions
-* I made an assumption that the products and the shopping carts will be stored in memory in static properties. After the products are
+* I made the assumption that the products and the shopping carts will be stored in memory in static properties. After the products are
 loaded for the first time from the csv files everything is stored in memory and all the stock reducing operations and updated are performed in the memory and not in the csv file.
 * While creating this project I made the assumption that the application will need the csvfile to run.
 * I made the assumption that the shopping identifier will be a string. The identifier can be user's name for example or any other string. If the shopping cart with the given identifier does not exist when adding a product a new cart will be created.
