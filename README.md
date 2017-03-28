@@ -1,8 +1,8 @@
-# ShoppingCart API
-Shopping cart basic API
+# Perfe Channel ShoppingCart API
+Programming test creating a shopping cart API based in web api 2 and asp.net MVC
 
 ## 1. Time to implement this project
-For the solution I spent 3.5 hours.
+For the solution I spent almost 4 hrs.
 
 ## 2. Compilation instructions
 The solution is consisting of
@@ -12,7 +12,7 @@ The solution is consisting of
 * Commmon library for Csv parsing
 
 The first time the solution is built nuget will pull all the packages mentioned in the packages.json files from the nuget
-repository (internet connection is required to pull down the packages that this solution uses).
+repository.
 
 The webservice project has the following value in the web.config
 ```
@@ -40,10 +40,11 @@ All the service methods are available using HTTP Get verb.
 
 ## 3. Assumptions
 * While creating this project I made the assumption that the application will need the csvfile to run.
-* I made the assumption that no information about the pricing will be processed during checkout
+* I made the assumption that the shopping identifier will be a string. The identifier can be user's name for example or any other string. If the shopping cart with the given identifier does not exist when adding a product a new cart will be created.
 * I made the assumption that a third party library for CSV parsing can be used instead of implementing my own
 * Every method even for checkout and addproduct will be using an HTTP verb for testing purposes.
-* No client is needed at the time being, the application can be tested directly from a browser
+* No client is needed at the time being, the application can be tested directly from a browser.
+* The stock is reduced from the datasource when the shopping cart is being checked out. As in a real world scenario the stock is not reduced by adding to the shopping cart only. The stock is checked before checkout to ensure it has sufficient quantity to execute the order.
 
 ## 4. Design
 The reason I chose this design is because I wanted every layer of the solution to be replacable with a different implementation.
@@ -51,3 +52,10 @@ I approached this project using the stairway pattern thus I created different la
 The web service has the dependency of the business layer, the business layer the dependency of the storage and the storage
 the dependency of the csv parser.
 The benefit is that every layer can be unit tested separately while mocking out all of its dependencies.
+
+## 5. Future work.
+I believe I completed all 3 user stories. However if I had more time I would add the following:
+* All methods to be implemented using async
+* Exception handling in the controller responding back appropriate status codes.
+* I would create integration unit tests.
+* Specflow tests for user story scenarios.
