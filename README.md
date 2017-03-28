@@ -45,15 +45,16 @@ loaded for the first time from the csv file everything is stored in memory and a
 * I made the assumption that the shopping cart identifier will be a string. The identifier can be user's name for example or any other string. If the shopping cart with the given identifier does not exist when adding a product a new cart will be created.
 * I made the assumption that a third party library for CSV parsing can be used instead of implementing my own
 * Every method even for checkout and addproduct will be using an HTTP verb for testing purposes.
-* No client is needed at the time being, the application can be tested directly from a browser.
-* The stock is reduced from the datasource when the shopping cart is being checked out. As in a real world scenario the stock is not reduced by adding to the shopping cart only. The stock is checked before checkout to ensure it has sufficient quantity to execute the order.
+* No client is needed at the time being, the web service can be tested directly from the browser.
+* The stock is reduced from the datasource when the shopping cart is being checked out. As in a real world scenario the stock is not reduced by adding to the shopping cart only. The stock is checked before checkout to ensure that it has sufficient quantity to execute the order.
 
 ## 4. Design
 The reason I chose this design is because I wanted every layer of the solution to be replacable with a different implementation.
-I approached this project using the stairway pattern thus I created different layers for each application area.
+I approached this project using the stairway pattern thus I created different layers for each application area and an abstractions projects where all the interfaces reside.
 The web service has the dependency of the business layer, the business layer the dependency of the storage and the storage
 the dependency of the csv parser.
 The benefit is that every layer can be unit tested separately while mocking out all of its dependencies.
+In the web service layer all the dependencies are resolved using SimpleInjector IoC container.
 
 ## 5. Future work
 I believe I completed all 3 user stories. However if I had more time I would add the following:
