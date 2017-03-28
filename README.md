@@ -2,7 +2,7 @@
 Programming test creating a shopping cart API based in web api 2 and asp.net MVC
 
 ## 1. Time to implement this project
-For the solution I spent almost 4 hrs.
+For the solution and the questions I spent almost 4 hrs.
 
 ## 2. Compilation instructions
 The solution is consisting of
@@ -53,7 +53,7 @@ The web service has the dependency of the business layer, the business layer the
 the dependency of the csv parser.
 The benefit is that every layer can be unit tested separately while mocking out all of its dependencies.
 
-## 5. Future work.
+## 5. Future work
 I believe I completed all 3 user stories. However if I had more time I would add the following:
 * All methods to be implemented using async
 * Exception handling in the controller responding back appropriate status codes.
