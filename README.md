@@ -42,7 +42,7 @@ All the service methods are available using HTTP Get verb.
 * I made the assumption that the products and the shopping carts will be stored in memory in static properties. After the products are
 loaded for the first time from the csv file everything is stored in memory and all the stock reducing operations and updates are performed in the memory and not in the csv file.
 * While creating this project I made the assumption that the application will need the csvfile to run.
-* I made the assumption that the shopping identifier will be a string. The identifier can be user's name for example or any other string. If the shopping cart with the given identifier does not exist when adding a product a new cart will be created.
+* I made the assumption that the shopping cart identifier will be a string. The identifier can be user's name for example or any other string. If the shopping cart with the given identifier does not exist when adding a product a new cart will be created.
 * I made the assumption that a third party library for CSV parsing can be used instead of implementing my own
 * Every method even for checkout and addproduct will be using an HTTP verb for testing purposes.
 * No client is needed at the time being, the application can be tested directly from a browser.
