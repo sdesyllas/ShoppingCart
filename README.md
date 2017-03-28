@@ -1,4 +1,4 @@
-# Perfect Channel ShoppingCart API
+# ShoppingCart API
 Programming test creating a shopping cart API based in web api 2 and asp.net MVC
 
 ## 1. Time to implement this project
